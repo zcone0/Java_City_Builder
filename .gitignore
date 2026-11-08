@@ -1,0 +1,19 @@
+# Java and BlueJ build output
+*.class
+*.ctxt
+
+# Common Java build directories
+bin/
+build/
+out/
+target/
+
+# IDE metadata
+.idea/
+*.iml
+.project
+.classpath
+
+# Operating system files
+.DS_Store
+Thumbs.db
