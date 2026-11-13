@@ -1,19 +1,36 @@
-# Java and BlueJ build output
-*.class
-*.ctxt
-
-# Common Java build directories
-bin/
-build/
-out/
-target/
-
-# IDE metadata
-.idea/
-*.iml
-.project
-.classpath
-
 # Operating system files
 .DS_Store
 Thumbs.db
+
+# Maven build output (compiled classes and JARs)
+target/
+/citybuilder/
+pom.xml
+.mvn/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+*.lastUpdated
+.flattened-pom.xml
+
+# Compiled Java files and logs
+*.class
+*.ctext
+*.jar
+*.war
+*.ear
+*.log
+hs_err_pid*
+
+# VS Code & OS specific files
+.vscode/
+.settings/
+.classpath
+.project
+.DS_Store
