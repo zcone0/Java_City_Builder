@@ -1,58 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 .root {
-    -fx-font-family: "Segoe UI", Arial, sans-serif;
-    -fx-font-size: 16px;
+    -fx-font-family: "Press Start 2P", system-ui;
+    -fx-font-size: 14px;
+    -fx-text-fill: #263238;
+}
+
+.press-start-2p-regular {
+    -fx-font-family: "Press Start 2P", system-ui;
+    -fx-font-weight: 400;
+    -fx-font-style: normal;
 }
 
 .main-screen {
-    -fx-background-color: #cfe2f3;
+    -fx-background-color: #dceaf2;
 }
 
 .canvas {
     -fx-background-color: #cfe2f3;
-    -fx-border-color: #263238;
-    -fx-border-width: 0 0 2px 0;
+    -fx-border-color: #78909c;
+    -fx-border-width: 0 0 1px 0;
 }
 
 .canvas-label {
-    -fx-text-fill: #111111;
+    -fx-text-fill: #455a64;
+    -fx-font-size: 1.15em;
 }
 
 .bottom-panel {
-    -fx-background-color: #cfe2f3;
+    -fx-background-color: #dceaf2;
+    -fx-min-height: 260px;
+    -fx-pref-height: 34%;
 }
 
 .bottom-content {
-    -fx-padding: 7px 8px 8px 8px;
-    -fx-spacing: 5px;
+    -fx-padding: 8px;
+    -fx-spacing: 10px;
 }
 
 .options-section {
-    -fx-spacing: 7px;
-    -fx-border-color: #263238;
+    -fx-spacing: 8px;
+    -fx-border-color: #78909c;
     -fx-border-width: 0 1px 0 0;
-    -fx-padding: 0 8px 0 0;
+    -fx-padding: 0 10px 0 0;
+    -fx-min-width: 360px;
 }
 
 .tabs {
     -fx-spacing: 0;
-    -fx-border-color: #263238;
+    -fx-border-color: #78909c;
     -fx-border-width: 0 0 1px 0;
 }
 
 .tab-button {
-    -fx-background-color: transparent;
+    -fx-background-color: #c5dbe7;
+    -fx-border-color: transparent;
     -fx-font-weight: bold;
-    -fx-padding: 0 16px 8px 16px;
+    -fx-padding: 8px 20px;
+    -fx-min-width: 88px;
+    -fx-cursor: hand;
 }
 
 .tab-button.selected {
-    -fx-border-color: #263238;
-    -fx-border-width: 0 0 2px 0;
+    -fx-background-color: #dceaf2;
+    -fx-border-color: #1976a3;
+    -fx-border-width: 0 0 3px 0;
 }
 
 .options-scroll {
     -fx-background-color: transparent;
     -fx-border-color: #9eacb5;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
 }
 
 .options-scroll > .viewport {
@@ -61,28 +80,47 @@
 
 .option-grid {
     -fx-background-color: transparent;
-    -fx-padding: 0;
+    -fx-padding: 1px;
 }
 
 .option-button {
-    -fx-background-color: transparent;
+    -fx-background-color: #eaf3f7;
     -fx-border-color: #9eacb5;
     -fx-border-width: 0 1px 1px 0;
-    -fx-alignment: CENTER_LEFT;
-    -fx-padding: 8px;
+    -fx-alignment: CENTER;
+    -fx-padding: 8px 6px;
+    -fx-wrap-text: true;
+    -fx-cursor: hand;
 }
 
 .option-button:hover {
-    -fx-background-color: #bdd3e4;
+    -fx-background-color: #c5e1ee;
+}
+
+.option-button:pressed {
+    -fx-background-color: #a7cfe0;
+}
+
+.menu-content {
+    -fx-padding: 4px;
+}
+
+.menu-heading {
+    -fx-font-size: 1.1em;
+    -fx-font-weight: bold;
+    -fx-text-fill: #37474f;
+    -fx-padding: 5px 4px 1px 4px;
 }
 
 .information-panel {
-    -fx-min-width: 280px;
+    -fx-min-width: 300px;
+    -fx-pref-width: 30%;
     -fx-spacing: 8px;
+    -fx-background-color: rgba(255, 255, 255, 0.28);
 }
 
 .information-heading {
-    -fx-font-size: 18px;
+    -fx-font-size: 1.15em;
     -fx-font-weight: bold;
 }
 
@@ -95,8 +133,8 @@
 }
 
 .status-bar {
-    -fx-border-color: #263238;
+    -fx-border-color: #78909c;
     -fx-border-width: 1px 0 0 0;
-    -fx-padding: 5px 16px;
-    -fx-spacing: 18px;
+    -fx-padding: 7px 16px;
+    -fx-spacing: 1.2em;
 }
