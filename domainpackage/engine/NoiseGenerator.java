@@ -3,9 +3,9 @@ package domainpackage.engine;
 import java.util.Random;
 
 public class NoiseGenerator {
-    private static final int DEFAULT_WIDTH = 2048;
-    private static final int DEFAULT_HEIGHT = 2048;
-    private static final double DEFAULT_WORLD_SCALE = 10.0;
+    private static final int DEFAULT_WIDTH = 128;
+    private static final int DEFAULT_HEIGHT = 128;
+    private static final double DEFAULT_WORLD_SCALE = 3.0;
 
     private long seed;
     private int width = DEFAULT_WIDTH;

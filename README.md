@@ -28,3 +28,11 @@ To compile and package the project without launching it:
 ```shell
 mvn clean package
 ```
+
+## Launch with BlueJ
+
+Open the project directory (the directory containing `package.bluej`) in
+BlueJ, compile the classes, and run `domainpackage.MainGame` using its `main`
+method. BlueJ must use a JDK with JavaFX available on the module path. The
+application accepts both Maven's resource layout and BlueJ's project-directory
+classpath layout.
