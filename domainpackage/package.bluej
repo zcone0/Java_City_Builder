@@ -1,4 +1,5 @@
 #BlueJ package file
+<<<<<<< HEAD
 objectbench.height=169
 objectbench.width=1298
 package.divider.horizontal=0.6001742160278745
@@ -9,27 +10,39 @@ package.editor.x=22
 package.editor.y=22
 package.frame.height=682
 package.frame.width=1322
+=======
+objectbench.height=192
+objectbench.width=364
+package.divider.horizontal=0.5995694294940795
+package.divider.vertical=0.6966632962588473
+package.editor.height=451
+package.editor.width=526
+package.editor.x=690
+package.editor.y=22
+package.frame.height=758
+package.frame.width=654
+>>>>>>> ebe800b10966d4ada44317e563194d0a3e2b8bb0
 package.numDependencies=0
 package.numTargets=6
 package.showExtends=true
 package.showUses=true
 readme.height=60
 readme.name=@README
-readme.width=49
+readme.width=48
 readme.x=10
 readme.y=10
 target1.height=82
-target1.name=view
+target1.name=controller
 target1.type=PackageTarget
 target1.width=120
-target1.x=140
-target1.y=210
+target1.x=10
+target1.y=110
 target2.height=82
-target2.name=controller
+target2.name=view
 target2.type=PackageTarget
 target2.width=120
-target2.x=10
-target2.y=110
+target2.x=140
+target2.y=210
 target3.height=82
 target3.name=world
 target3.type=PackageTarget

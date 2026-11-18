@@ -24,9 +24,10 @@ public class MainGame extends Application {
         scene.getStylesheets().add(stylesheet);
 
         primaryStage.setTitle("EquiCity");
-        primaryStage.setMinWidth(720);
-        primaryStage.setMinHeight(520);
+        primaryStage.setMinWidth(960);
+        primaryStage.setMinHeight(720);
         primaryStage.setScene(scene);
+        primaryStage.setMaximized(true);
         primaryStage.show();
     }
 
