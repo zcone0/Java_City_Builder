@@ -138,3 +138,115 @@
     -fx-padding: 7px 16px;
     -fx-spacing: 1.2em;
 }
+
+.main-menu-screen {
+    -fx-background-color: #dceaf2;
+}
+
+.main-menu-box {
+    -fx-alignment: CENTER;
+    -fx-pref-width: 260px;
+    -fx-max-width: 260px;
+    -fx-padding: 18px 24px;
+    -fx-background-color: rgba(220, 234, 242, 0.92);
+    -fx-border-color: #78909c;
+    -fx-border-width: 2px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 18, 0.2, 0, 6);
+}
+
+.main-menu-content {
+    -fx-alignment: CENTER;
+}
+
+.main-menu-title {
+    -fx-font-size: 42px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #263238;
+}
+
+.main-menu-darkening {
+    -fx-background-color: rgba(15, 30, 38, 0.48);
+}
+
+.main-menu-button {
+    -fx-background-color: #eaf3f7;
+    -fx-border-color: #78909c;
+    -fx-border-width: 2px;
+    -fx-font-size: 18px;
+    -fx-padding: 14px 36px;
+    -fx-cursor: hand;
+}
+
+.main-menu-button:hover,
+.overlay-button:hover,
+.save-slot-button:hover {
+    -fx-background-color: #c5e1ee;
+}
+
+.menu-overlay {
+    -fx-alignment: center;
+}
+
+.overlay-backdrop {
+    -fx-background-color: rgba(15, 30, 38, 0.58);
+}
+
+.overlay-panel {
+    -fx-background-color: #dceaf2;
+    -fx-border-color: #78909c;
+    -fx-border-width: 2px;
+    -fx-pref-width: 340px;
+    -fx-max-width: 340px;
+    -fx-background-radius: 6px;
+    -fx-border-radius: 6px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.35), 18, 0.2, 0, 6);
+}
+
+.pause-panel {
+    -fx-pref-height: 430px;
+    -fx-max-height: 430px;
+}
+
+.overlay-heading {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-padding: 0 0 8px 0;
+}
+
+.overlay-button {
+    -fx-background-color: #eaf3f7;
+    -fx-border-color: #9eacb5;
+    -fx-border-width: 0 1px 1px 0;
+    -fx-pref-height: 48px;
+    -fx-cursor: hand;
+}
+
+.settings-panel {
+    -fx-min-height: 300px;
+}
+
+.save-slots {
+    -fx-pref-width: 300px;
+    -fx-max-width: 300px;
+}
+
+.save-slot-row {
+    -fx-alignment: center-left;
+    -fx-spacing: 10px;
+    -fx-background-color: rgba(234, 243, 247, 0.85);
+    -fx-border-color: #9eacb5;
+    -fx-padding: 8px;
+}
+
+.save-slot-label {
+    -fx-padding: 0 8px;
+}
+
+.save-slot-button {
+    -fx-background-color: #eaf3f7;
+    -fx-border-color: #9eacb5;
+    -fx-pref-width: 80px;
+    -fx-cursor: hand;
+}
