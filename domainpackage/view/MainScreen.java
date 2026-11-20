@@ -145,6 +145,10 @@ public class MainScreen extends BorderPane {
         zoneOptions.getChildren().add(createMenuHeading("Type:"));
         zoneOptions.getChildren().add(zoneType);
         VBox container = new VBox();
+        container.getChildren().add(createMenuButton("Low Density Residential"));
+        container.getChildren().add(createMenuButton("Medium Density Residential"));
+        container.getChildren().add(createMenuButton("High Density Residential"));
+        zoneOptions.getChildren().add(container);
         zoneType.setValue("Residential");
         zoneType.valueProperty().addListener((obs, oldVal, newVal) -> {
             if (newVal != null) {
