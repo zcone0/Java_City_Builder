@@ -22,6 +22,12 @@ public class NoiseGenerator {
         setSeed(seed);
     }
 
+    public float sampleTile(int worldX, int worldY) {
+        double nx = (worldX / (double) width) * worldScale;
+        double ny = (worldY / (double) height) * worldScale;
+        return (float) fbm(nx, ny, octaves, frequency, lacunarity, persistence);
+    }
+
     public double[][] generate() {
         double[][] values = new double[height][width];
 
