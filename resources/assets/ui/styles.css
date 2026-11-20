@@ -185,6 +185,12 @@
     -fx-background-color: #c5e1ee;
 }
 
+.scroll-pane{
+    -fx-background-color: transparent;
+    -fx-hbar-policy: NEVER;
+    -fx-vbar-policy: NEVER;
+}
+
 .menu-overlay {
     -fx-alignment: center;
 }
