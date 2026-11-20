@@ -1,0 +1,27 @@
+#BlueJ class context
+#Fri Nov 20 10:42:59 EST 2026
+comment0.target=MainScreen
+comment1.target=MainScreen()
+comment10.params=optionGrid
+comment10.target=javafx.scene.control.ScrollPane createOptionsScrollPane(javafx.scene.layout.GridPane)
+comment11.params=content
+comment11.target=javafx.scene.layout.VBox wrapContent(javafx.scene.Node)
+comment12.params=text
+comment12.target=javafx.scene.control.Label createMenuHeading(java.lang.String)
+comment13.params=text
+comment13.target=javafx.scene.control.Button createMenuButton(java.lang.String)
+comment14.params=text
+comment14.target=javafx.scene.control.Button createOptionButton(java.lang.String)
+comment15.target=javafx.scene.layout.VBox createInformationPanel()
+comment16.target=javafx.scene.layout.HBox createStatusBar()
+comment2.target=javafx.scene.control.ScrollPane createPanableGrid()
+comment3.target=javafx.scene.canvas.Canvas createCanvas()
+comment4.target=javafx.scene.layout.VBox createBottomPanel()
+comment5.params=text
+comment5.target=javafx.scene.control.Button createTabButton(java.lang.String)
+comment6.params=selectedTab content
+comment6.target=void selectTab(javafx.scene.control.Button, javafx.scene.Node)
+comment7.target=javafx.scene.control.ScrollPane createBuildOptions()
+comment8.target=javafx.scene.layout.VBox createZoneOptions()
+comment9.target=javafx.scene.layout.VBox createTabInfo()
+numComments=17

@@ -1,7 +1,6 @@
 package domainpackage.view;
 
 import java.util.List;
-import javafx.scene.control.ComboBox;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -14,8 +13,12 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
+import javafx.scene.control.ComboBox;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+
 
 public class MainScreen extends BorderPane {
     private static final List<String> BUILD_OPTIONS = List.of(
@@ -29,17 +32,39 @@ public class MainScreen extends BorderPane {
 
     public MainScreen() {
         getStyleClass().add("main-screen");
-        setCenter(createCanvas());
+        setCenter(createPanableGrid());
         setBottom(createBottomPanel());
     }
+    
+    private ScrollPane createPanableGrid(){
+        ScrollPane grid = new ScrollPane();
+        
+        grid.setPannable(true);
+        //grid.setPrefSize(300, 300);
+        grid.setContent(createCanvas());
+        
+        grid.setFitToWidth(true);
+        grid.setFitToHeight(true);
+        
+        return grid;
+    }
 
-    private VBox createCanvas() {
-        Label canvasLabel = new Label("JavaFX Canvas (Grid)");
-        canvasLabel.getStyleClass().add("canvas-label");
+    private Canvas createCanvas() {
+        Canvas canvas = new Canvas(2000,2000); // Scalable
+        GraphicsContext gc = canvas.getGraphicsContext2D();
+    
+        gc.setLineWidth(5);
+        gc.strokeRect(1, 1, (canvas.getWidth()-1), (canvas.getHeight()-1));
+        //gc.strokeLine(1, 1, (canvas.getWidth()-1), 1);
+    
+        canvas.setOnMouseClicked(event -> {
+            double x = event.getX(), y = event.getY();
+        });
+        
 
-        VBox canvas = new VBox(canvasLabel);
-        canvas.getStyleClass().add("canvas");
-        canvas.setAlignment(Pos.CENTER);
+        //VBox canvas = new VBox(canvasLabel);
+        //canvas.getStyleClass().add("canvas");
+        //canvas.setAlignment(Pos.CENTER);
         return canvas;
     }
 

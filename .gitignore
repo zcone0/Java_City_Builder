@@ -21,7 +21,7 @@ buildNumber.properties
 
 # Compiled Java files and logs
 *.class
-*.ctext
+*.ctxt
 *.jar
 *.war
 *.ear
