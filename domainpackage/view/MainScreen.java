@@ -1,6 +1,7 @@
 package domainpackage.view;
 
 import java.util.List;
+import javafx.scene.control.ComboBox;
 
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -13,6 +14,8 @@ import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class MainScreen extends BorderPane {
     private static final List<String> BUILD_OPTIONS = List.of(
