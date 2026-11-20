@@ -110,16 +110,35 @@ public class MainScreen extends BorderPane {
     private VBox createZoneOptions() {
         VBox zoneOptions = new VBox(10);
         zoneOptions.getStyleClass().add("menu-content");
-        zoneOptions.getChildren().add(createMenuHeading("Residential"));
-        zoneOptions.getChildren().add(createMenuButton("Low Density Residential"));
-        zoneOptions.getChildren().add(createMenuButton("Medium Density Residential"));
-        zoneOptions.getChildren().add(createMenuButton("High Density Residential"));
-        zoneOptions.getChildren().add(createMenuHeading("Industrial"));
-        zoneOptions.getChildren().add(createMenuButton("Light Industrial"));
-        zoneOptions.getChildren().add(createMenuButton("Heavy Industrial"));
-        zoneOptions.getChildren().add(createMenuHeading("Commercial"));
-        zoneOptions.getChildren().add(createMenuButton("Local Commercial"));
-        zoneOptions.getChildren().add(createMenuButton("Retail Commercial"));
+        ObservableList<String> items = FXCollections.observableArrayList(
+            "Residential", "Industrial", "Commercial"
+        );
+        ComboBox zoneType = new ComboBox(items);
+        zoneOptions.getChildren().add(createMenuHeading("Type:"));
+        zoneOptions.getChildren().add(zoneType);
+        VBox container = new VBox();
+        zoneType.valueProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal != null) {
+                container.getChildren().clear();
+            }
+            if (newVal == "Residential"){
+                container.getChildren().add(createMenuButton("Low Density Residential"));
+                container.getChildren().add(createMenuButton("Medium Density Residential"));
+                container.getChildren().add(createMenuButton("High Density Residential"));
+                zoneOptions.getChildren().add(container);
+            }
+            else if (newVal == "Industrial"){
+                container.getChildren().add(createMenuButton("Light Industrial"));
+                container.getChildren().add(createMenuButton("Heavy Industrial"));
+                zoneOptions.getChildren().add(container);
+            }
+            else if (newVal == "Commercial"){
+                container.getChildren().add(createMenuButton("Local Commercial"));
+                container.getChildren().add(createMenuButton("Retail Commercial"));
+                zoneOptions.getChildren().add(container);
+            }
+        
+        });
 
         ScrollPane scrollPane = new ScrollPane(zoneOptions);
         scrollPane.getStyleClass().add("options-scroll");
