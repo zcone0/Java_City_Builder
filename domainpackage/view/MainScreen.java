@@ -29,10 +29,12 @@ public class MainScreen extends BorderPane {
     private final Label selectedOption = new Label("Nothing selected");
     private final Label statusLabel = new Label("Icon  |  Icon  |  Icon");
     private final VBox optionsSection = new VBox();
+    private final ScrollPane gameScrollPane;
 
     public MainScreen() {
         getStyleClass().add("main-screen");
-        setCenter(createPanableGrid());
+        gameScrollPane = createPanableGrid();
+        setCenter(gameScrollPane);
         setBottom(createBottomPanel());
     }
     
@@ -45,6 +47,8 @@ public class MainScreen extends BorderPane {
         
         grid.setFitToWidth(true);
         grid.setFitToHeight(true);
+        
+        grid.getStyleClass().add("scroll-pane");
         
         return grid;
     }
@@ -59,6 +63,9 @@ public class MainScreen extends BorderPane {
     
         canvas.setOnMouseClicked(event -> {
             double x = event.getX(), y = event.getY();
+            statusLabel.setText(
+                String.format("| X: %.0f  Y: %.0f", x, y)
+            );
         });
         
 
@@ -142,6 +149,8 @@ public class MainScreen extends BorderPane {
             "Residential", "Industrial", "Commercial"
         );
         ComboBox zoneType = new ComboBox(items);
+        zoneType.setValue("Residential");
+        
         zoneOptions.getChildren().add(createMenuHeading("Type:"));
         zoneOptions.getChildren().add(zoneType);
         VBox container = new VBox();
@@ -252,6 +261,7 @@ public class MainScreen extends BorderPane {
         Label population = new Label("| Pop 100");
         Label day = new Label("| Day 00 00:00");
         Label money = new Label("| $0000");
+        
 
         HBox statusBar = new HBox(statusLabel, population, day, money);
         statusBar.getStyleClass().add("status-bar");
